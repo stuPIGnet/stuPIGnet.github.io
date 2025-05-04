@@ -2,7 +2,7 @@
   "name": "stuPIG's nest",
   "short_name": "stuPIG",
   "start_url": "/",
-  "display": "standalone",
+  "display": "browser",
   "background_color": "#018281",
   "theme_color": "#018281",
   "icons": [
