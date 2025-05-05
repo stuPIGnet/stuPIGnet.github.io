@@ -7,7 +7,6 @@
   <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="manifest" href="/manifest.webmanifest">
   <meta name="theme-color" content="#018281">
   <style>
     body {
@@ -88,23 +87,6 @@
       text-align: center;
       color: #FFFAF3;
     }
-
-#install-button {
-  display: none; /* 기본은 숨김 */
-  padding: 12px 28px;
-  background: #018281;
-  color: #fff;
-  border: none;
-  border-radius: 24px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(1,130,129,0.16);
-  transition: background 0.2s;
-}
-#install-button:hover {
-  background: #025b5a;
-}
   </style>
 </head>
 <body>
@@ -251,31 +233,11 @@
       <option value="https://github.com">GitHub, Inc.</option>
       <option value="https://rainymood.com">RAINY MOOD®</option>
     </select>
-<button id="install-button" style="display:none;">
-  stuPIGnet 바로가기 설치♥
-</button>
   </div>
 </main>
 <footer>
   <div class="copyright">Copyright &copy 2005 스투피그. All rights reserved.</div>
 </footer>
-<script>
-let installPrompt = null;
-const installButton = document.getElementById("install-button");
-
-window.addEventListener("beforeinstallprompt", (event) => {
-  event.preventDefault();
-  installPrompt = event;
-  installButton.style.display = "block"; // 버튼 보이기
-});
-
-installButton.addEventListener("click", async () => {
-  if (!installPrompt) return;
-  await installPrompt.prompt();
-  installPrompt = null;
-  installButton.style.display = "none";
-});
-</script>
 <script>
 function goToLink(select) {
 const url = select.value;
