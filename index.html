@@ -88,6 +88,23 @@
       text-align: center;
       color: #FFFAF3;
     }
+
+#install-button {
+  display: none; /* 기본은 숨김 */
+  padding: 12px 28px;
+  background: #018281;
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(1,130,129,0.16);
+  transition: background 0.2s;
+}
+#install-button:hover {
+  background: #025b5a;
+}
   </style>
 </head>
 <body>
@@ -234,6 +251,9 @@
       <option value="https://github.com">GitHub, Inc.</option>
       <option value="https://rainymood.com">RAINY MOOD®</option>
     </select>
+<button id="install-button" style="display:none;">
+  stuPIGnet 바로가기 설치♥
+</button>
   </div>
 </main>
 <footer>
