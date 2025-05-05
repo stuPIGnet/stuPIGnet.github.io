@@ -240,12 +240,29 @@
   <div class="copyright">Copyright &copy 2005 스투피그. All rights reserved.</div>
 </footer>
 <script>
-  function goToLink(select) {
-  const url = select.value;
-  if (url) {
-    window.open(url, '_blank');
-  }
-  }
+let installPrompt = null;
+const installButton = document.getElementById("install-button");
+
+window.addEventListener("beforeinstallprompt", (event) => {
+  event.preventDefault();
+  installPrompt = event;
+  installButton.style.display = "block"; // 버튼 보이기
+});
+
+installButton.addEventListener("click", async () => {
+  if (!installPrompt) return;
+  await installPrompt.prompt();
+  installPrompt = null;
+  installButton.style.display = "none";
+});
+</script>
+<script>
+function goToLink(select) {
+const url = select.value;
+if (url) {
+  window.open(url, '_blank');
+}
+}
 </script>
 </body>
 </html>
