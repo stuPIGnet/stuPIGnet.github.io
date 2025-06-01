@@ -1,13 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" height="256px" id="layer1" version="1.1" viewBox="0 0 256 256" width="256px" x="0px" y="0px" xml:space="preserve">
-  <style>
-    .a { fill: #0f0f0f; }
-    @media (prefers-color-scheme: dark) {
-      .a { fill: #f0f0f0; }
-    }
-  </style>
-  <path class="a" d="..." />
-  <circle cx="128" cy="128" fill="#FFA788" r="128" />
-  <circle cx="70.4" cy="134.4" fill="#BF1926" r="32" />
-  <circle cx="185.6" cy="134.4" fill="#BF1926" r="32" />
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" height="256px" id="layer1" version="1.1" viewBox="0 0 256 256" width="256px" x="0px" xml:space="preserve" y="0px">
+<rect x="0" y="0" width="256" height="256" fill="none" />
+<circle cx="128" cy="128" fill="#FFA788" r="128" />
+<circle cx="70.4" cy="134.4" fill="#BF1926" r="32" />
+<circle cx="185.6" cy="134.4" fill="#BF1926" r="32" />
 </svg>
